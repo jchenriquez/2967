@@ -1,0 +1,12 @@
+{
+   "test1": {
+     "input": [-5, 1, -1, 1, 2],
+     "target": 3,
+     "output": 2 
+   },
+   "test2": {
+     "input": [-1, 2, 1, -4],
+     "target": 1,
+     "output": 2
+   }
+}

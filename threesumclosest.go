@@ -7,6 +7,10 @@ import (
 
 func setResult(arr []int, result *int, sumSoFar int, target int) {
 
+  if len(arr) == 0 {
+    return
+  }
+
 	ind := sort.Search(len(arr), func(i int) bool {
 		return target <= sumSoFar+arr[i]
 	})
@@ -33,8 +37,8 @@ func ThreeSumClosest(nums []int, target int) int {
 	for i := 0; i < len(nums); i++ {
 		for j := i + 1; j < len(nums); j++ {
 			sumed := nums[i] + nums[j]
-			setResult(nums[i+i:j], &result, sumed, target)
-			setResult(nums[j:], &result, sumed, target)
+			setResult(nums[i+1:j], &result, sumed, target)
+			setResult(nums[j+1:], &result, sumed, target)
 		}
 	}
 
